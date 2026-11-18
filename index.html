@@ -4,126 +4,226 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RAPHINHA EMPIRE 🐐</title>
+<title>RAPHINHA EMPIRE | THE BRAZILIAN KING</title>
 
 <style>
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{
-  margin:0;
-  background:#080b19;
-  color:white;
-  font-family:Arial,sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-header{
-  text-align:center;
-  padding:30px 15px;
-  background:linear-gradient(135deg,#071b50,#8b1028);
-  border-bottom:4px solid #e6b84b;
+
+body {
+  background: #080611;
+  color: white;
+  font-family: Arial, sans-serif;
 }
-.logo{
-  width:90%;
-  max-width:650px;
-  display:block;
-  margin:15px auto;
-  border-radius:15px;
+
+header {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at 50% 40%, #50158b 0%, transparent 45%),
+    linear-gradient(135deg, #080611, #170829, #080611);
+  overflow: hidden;
+  position: relative;
 }
-h1{
-  font-size:clamp(30px,6vw,52px);
-  color:#ffd45c;
-  margin:12px;
-  text-shadow:0 0 15px #000;
+
+header::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #8b2cff;
+  filter: blur(180px);
+  opacity: 0.25;
+  top: 10%;
+  left: 10%;
 }
-header p{font-size:18px}
-nav{
-  background:#111a35;
-  padding:16px 8px;
-  text-align:center;
-  position:sticky;
-  top:0;
-  z-index:10;
-  border-bottom:2px solid #e52345;
+
+.hero-image {
+  width: 280px;
+  max-width: 80%;
+  border-radius: 25px;
+  border: 3px solid #a855f7;
+  box-shadow: 0 0 35px #8b2cff;
+  margin-bottom: 25px;
+  position: relative;
 }
-nav a{
-  color:white;
-  text-decoration:none;
-  margin:7px 10px;
-  font-weight:bold;
-  display:inline-block;
+
+h1 {
+  font-size: clamp(38px, 8vw, 75px);
+  color: #d8a5ff;
+  text-shadow: 0 0 25px #9d4edd;
+  position: relative;
 }
-nav a:hover{color:#ffd45c}
-section{
-  padding:35px 20px;
-  max-width:1050px;
-  margin:auto;
+
+header p {
+  color: #ddd0ee;
+  margin-top: 12px;
+  font-size: 18px;
+  position: relative;
 }
-h2{
-  color:#ffcc55;
-  border-bottom:2px solid #e52345;
-  padding-bottom:12px;
+
+nav {
+  background: #130b20;
+  padding: 18px 10px;
+  text-align: center;
+  border-top: 1px solid #8b2cff;
+  border-bottom: 1px solid #8b2cff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-.card{
-  background:linear-gradient(145deg,#151e3b,#10172c);
-  border-radius:16px;
-  padding:22px;
-  margin:16px 0;
-  border:1px solid #293c75;
-  box-shadow:0 5px 20px #0005;
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 14px;
+  display: inline-block;
+  font-weight: bold;
 }
-.stats{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-  gap:14px;
+
+nav a:hover {
+  color: #c084fc;
 }
-.stat{
-  background:#111a35;
-  padding:20px 10px;
-  border-radius:14px;
-  text-align:center;
-  border:1px solid #354b83;
+
+section {
+  padding: 65px 8%;
+  max-width: 1200px;
+  margin: auto;
 }
-.stat strong{
-  display:block;
-  font-size:32px;
-  color:#ffd45c;
-  margin-bottom:8px;
+
+h2 {
+  color: #c084fc;
+  font-size: 32px;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 0 0 15px #7e22ce;
 }
-.stat span{color:#ddd}
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:15px;
-  text-align:center;
+
+.intro {
+  background: #130d1e;
+  border: 1px solid #542080;
+  border-radius: 18px;
+  padding: 30px;
+  line-height: 1.9;
+  text-align: center;
+  font-size: 18px;
 }
-th,td{
-  padding:13px 8px;
-  border-bottom:1px solid #354365;
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
 }
-th{color:#ffd45c;background:#111a35}
-tr:hover{background:#202c4b}
-a.button{
-  display:inline-block;
-  background:linear-gradient(90deg,#092b72,#a81736);
-  color:white;
-  text-decoration:none;
-  padding:13px 20px;
-  border-radius:10px;
-  margin:7px;
-  font-weight:bold;
+
+.card {
+  background: linear-gradient(145deg, #211033, #100a19);
+  border: 1px solid #8135b9;
+  border-radius: 18px;
+  padding: 28px 15px;
+  text-align: center;
+  box-shadow: 0 0 18px #5b168533;
+  transition: 0.3s;
 }
-a.button:hover{background:#d7a936;color:#080b19}
-.trophy{font-size:25px}
-footer{
-  background:#111a35;
-  text-align:center;
-  padding:28px;
-  color:#ccc;
-  border-top:3px solid #e6b84b;
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 0 25px #9d4edd88;
 }
-.note{color:#aaa;font-size:13px}
-@media(max-width:600px){
-  nav a{margin:6px;font-size:14px}
-  section{padding:25px 14px}
-  th,td{padding:9px 4px;font-size:13px}
+
+.number {
+  font-size: 38px;
+  font-weight: bold;
+  color: #d8a5ff;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #e6d9f2;
+}
+
+.timeline {
+  border-right: 3px solid #a855f7;
+  padding-right: 25px;
+  line-height: 2.2;
+  font-size: 18px;
+}
+
+.timeline strong {
+  color: #d8a5ff;
+}
+
+.trophies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+}
+
+.trophy {
+  background: #180e26;
+  border: 1px solid #7e22ce;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.trophy span {
+  display: block;
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.highlight {
+  background: linear-gradient(120deg, #31104c, #160d23);
+  border: 1px solid #a855f7;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  line-height: 2;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 13px 25px;
+  background: #8b2cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #b56aff;
+  box-shadow: 0 0 20px #a855f7;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #10091a;
+  color: #c9a5e8;
+  border-top: 1px solid #7026a8;
+}
+
+@media(max-width: 600px) {
+  nav a {
+    margin: 7px;
+    font-size: 14px;
+  }
+  section {
+    padding: 45px 6%;
+  }
 }
 </style>
 </head>
@@ -131,173 +231,125 @@ footer{
 <body>
 
 <header>
-  <img class="logo" src="./raphinha-logo.png" alt="Raphinha Empire">
+  <img class="hero-image"
+  src="https://www.fcbarcelona.com/photo-resources/2025/09/10/08bbb1ff-004b-4623-a675-66fd1fbfdc8b/11-Raphinha.jpg?height=600&width=600"
+  alt="Raphinha FC Barcelona">
+
   <h1>RAPHINHA EMPIRE 👑</h1>
-  <p>THE HOME OF THE BRAZILIAN KING 🇧🇷</p>
-  <p>ONE PLAYER. ONE EMPIRE. VISCA BARÇA! 🔵🔴</p>
+  <p>THE BRAZILIAN KING 🇧🇷</p>
+  <p>ONE PLAYER. ONE EMPIRE. ONE LEGEND.</p>
 </header>
 
 <nav>
   <a href="#about">על ראפיניה</a>
-  <a href="#stats">סטטיסטיקות</a>
+  <a href="#stats">נתונים</a>
   <a href="#career">קריירה</a>
   <a href="#trophies">תארים</a>
-  <a href="#barca">ברצלונה</a>
   <a href="#highlights">היילייטס</a>
 </nav>
 
 <section id="about">
-  <h2>🐐 מי הוא ראפיניה?</h2>
-  <div class="card">
-    <h3>RAPHAEL DIAS BELLoli 🇧🇷</h3>
+  <h2>👑 THE KING</h2>
+  <div class="intro">
     <p>
-      ראפיניה הוא כדורגלן ברזילאי המשחק בברצלונה
-      ובנבחרת ברזיל. הוא ידוע במהירות, בטכניקה,
-      בבעיטות וביכולת ליצור מצבים לחבריו.
+      ראפיניה הוא אחד הכוכבים הגדולים של ברצלונה.
+      הכוכב הברזילאי משחק בעמדת הכנף, עם מהירות,
+      דריבל, בעיטות מדויקות ואופי של מנהיג.
     </p>
-    <p><b>תאריך לידה:</b> 14 בדצמבר 1996</p>
-    <p><b>מקום לידה:</b> פורטו אלגרה, ברזיל</p>
-    <p><b>עמדה:</b> שחקן כנף</p>
-    <p><b>רגל חזקה:</b> שמאל</p>
+    <p>
+      מספר חולצה: 11 🔥
+      <br>
+      נבחרת: ברזיל 🇧🇷
+      <br>
+      מועדון: FC Barcelona 🔵🔴
+    </p>
   </div>
 </section>
 
 <section id="stats">
-  <h2>📊 הסטטיסטיקות של ראפיניה</h2>
-
+  <h2>📊 SEASON 2026/27</h2>
   <div class="stats">
-    <div class="stat">
-      <strong>34</strong>
-      <span>שערים בעונת 2024/25</span>
+    <div class="card">
+      <div class="number">15</div>
+      <p>שערים בליגה</p>
     </div>
-    <div class="stat">
-      <strong>22</strong>
-      <span>בישולים בעונת 2024/25</span>
+    <div class="card">
+      <div class="number">3</div>
+      <p>בישולים בליגה</p>
     </div>
-    <div class="stat">
-      <strong>57</strong>
-      <span>הופעות בעונת 2024/25</span>
-    </div>
-    <div class="stat">
-      <strong>21</strong>
-      <span>שערים בעונת 2025/26</span>
+    <div class="card">
+      <div class="number">11</div>
+      <p>הופעות בליגה</p>
     </div>
   </div>
-
-  <div class="card">
-    <h3>⭐ עונת 2024/25 – עונת שיא!</h3>
-    <p>34 שערים בכל המסגרות</p>
-    <p>22 בישולים בכל המסגרות</p>
-    <p>57 משחקים במדי ברצלונה</p>
-    <p>עונה מדהימה שהסתיימה בזכייה בתארים!</p>
-  </div>
-
-  <div class="card">
-    <h3>🔥 עונת 2026/27 – הליגה הספרדית</h3>
-    <div class="stats">
-      <div class="stat">
-        <strong>15</strong>
-        <span>שערים</span>
-      </div>
-      <div class="stat">
-        <strong>3</strong>
-        <span>בישולים</span>
-      </div>
-    </div>
-    <p class="note">נתוני הליגה לפי FotMob בעת הכנת האתר. הנתונים משתנים במהלך העונה.</p>
-  </div>
+  <p style="text-align:center;color:#bda8d0;margin-top:18px">
+    נתוני הליגה לעונת 2026/27 לפי אתר LaLiga.
+  </p>
 </section>
 
 <section id="career">
-  <h2>🌍 הקריירה של ראפיניה</h2>
-  <div class="card">
-    <h3>הקבוצות שבהן שיחק:</h3>
-    <p>🇧🇷 Avaí</p>
-    <p>🇵🇹 Vitória de Guimarães</p>
-    <p>🇵🇹 Sporting CP</p>
-    <p>🇫🇷 Rennes</p>
-    <p>🏴 Leeds United</p>
-    <p>🔵🔴 FC Barcelona</p>
-  </div>
-  <div class="card">
-    <h3>🇧🇷 נבחרת ברזיל</h3>
-    <p>ראפיניה ערך את הופעת הבכורה שלו בנבחרת ברזיל בשנת 2021.</p>
-    <p>הוא ייצג את ברזיל במונדיאל 2022 ובקופה אמריקה 2024.</p>
+  <h2>⚽ THE JOURNEY</h2>
+  <div class="intro timeline">
+    <p><strong>AVAÍ</strong> – תחילת הדרך בברזיל 🇧🇷</p>
+    <p><strong>VITÓRIA GUIMARÃES</strong> – פורטוגל 🇵🇹</p>
+    <p><strong>SPORTING CP</strong> – פורטוגל 🇵🇹</p>
+    <p><strong>RENNES</strong> – צרפת 🇫🇷</p>
+    <p><strong>LEEDS UNITED</strong> – אנגליה 🏴</p>
+    <p><strong>FC BARCELONA</strong> – הבית של המלך 🔵🔴</p>
   </div>
 </section>
 
 <section id="trophies">
-  <h2>🏆 תארים והישגים</h2>
-  <div class="card">
-    <p class="trophy">🏆 אליפות ספרד – 2022/23</p>
-    <p class="trophy">🏆 אליפות ספרד – 2024/25</p>
-    <p class="trophy">🏆 אליפות ספרד – 2025/26</p>
-    <p class="trophy">🏆 גביע המלך – 2024/25</p>
-    <p class="trophy">🏆 הסופרקופה הספרדי – 2022/23</p>
-    <p class="trophy">🏆 הסופרקופה הספרדי – 2024/25</p>
-    <p class="trophy">🏆 הסופרקופה הספרדי – 2025/26</p>
-    <p class="trophy">🏆 גביע פורטוגל – 2018/19</p>
-    <p class="trophy">🏆 גביע הליגה הפורטוגלית – 2018/19</p>
-  </div>
-</section>
-
-<section id="barca">
-  <h2>🔵🔴 RAPHINHA & BARÇA</h2>
-  <div class="card">
-    <h3>MES QUE UN CLUB</h3>
-    <p>
-      מאז שהצטרף לברצלונה בשנת 2022,
-      ראפיניה הפך לאחד משחקני ההתקפה החשובים בקבוצה.
-    </p>
-    <p>הוא מביא מהירות, יצירתיות, לחץ ועבודה קשה.</p>
-    <h3>VISCA BARÇA! 💙❤️</h3>
+  <h2>🏆 THE TROPHY ROOM</h2>
+  <div class="trophies">
+    <div class="trophy">
+      <span>🏆</span>
+      <strong>3</strong>
+      <p>אליפויות ספרד</p>
+    </div>
+    <div class="trophy">
+      <span>🥇</span>
+      <strong>3</strong>
+      <p>סופר קאפ ספרדי</p>
+    </div>
+    <div class="trophy">
+      <span>🏆</span>
+      <strong>1</strong>
+      <p>גביע המלך</p>
+    </div>
   </div>
 </section>
 
 <section id="highlights">
-  <h2>🎥 רגעי הקסם של ראפיניה</h2>
-  <div class="card">
-    <h3>צפו ברגעים הגדולים!</h3>
-    <p>לחצו על הקישורים כדי למצוא סרטוני שערים והיילייטס.</p>
+  <h2>🎬 RAPHINHA HIGHLIGHTS</h2>
+  <div class="highlight">
+    <h3>THE BEST MOMENTS OF THE KING</h3>
+    <p>צפו בשערים, בדריבלים וברגעים הגדולים של ראפיניה.</p>
     <a class="button"
-       href="https://www.youtube.com/results?search_query=Raphinha+Barcelona+best+goals"
-       target="_blank" rel="noopener">
-       ⚽ השערים הגדולים
-    </a>
-    <a class="button"
-       href="https://www.youtube.com/results?search_query=Raphinha+Barcelona+skills"
-       target="_blank" rel="noopener">
-       ✨ תרגילים וביצועים
-    </a>
-    <a class="button"
-       href="https://www.youtube.com/results?search_query=Raphinha+Barcelona+highlights"
-       target="_blank" rel="noopener">
-       🎬 היילייטס
+    href="https://www.youtube.com/results?search_query=Raphinha+best+goals+skills"
+    target="_blank">
+      WATCH HIGHLIGHTS ▶
     </a>
   </div>
 </section>
 
 <section>
-  <h2>🔗 מקורות ונתונים</h2>
-  <div class="card">
+  <h2>🔗 OFFICIAL LINKS</h2>
+  <div class="highlight">
     <a class="button"
-       href="https://www.fcbarcelona.com/en/futbol/primer-equipo/jugadores/24156/raphael-dias-belloli"
-       target="_blank" rel="noopener">
-       האתר הרשמי של ברצלונה
-    </a>
+    href="https://www.fcbarcelona.com/en/players/24156"
+    target="_blank">הפרופיל הרשמי של ראפיניה</a>
+    <br>
     <a class="button"
-       href="https://www.fotmob.com/players/696679/raphinha"
-       target="_blank" rel="noopener">
-       כל הנתונים ב-FotMob
-    </a>
+    href="https://www.laliga.com/en-ES/player/raphinha"
+    target="_blank">נתוני LaLiga</a>
   </div>
 </section>
 
 <footer>
-  <h2>RAPHINHA EMPIRE 👑</h2>
-  <p>THE BRAZILIAN KING 🇧🇷</p>
-  <p>MADE FOR BARÇA FANS 💙❤️</p>
-  <p>VISCA BARÇA!</p>
+  <h3>RAPHINHA EMPIRE 👑</h3>
+  <p>THE HOME OF THE BRAZILIAN KING 🇧🇷</p>
+  <p>MADE FOR THE FANS 💜</p>
 </footer>
 
 </body>
