@@ -4,353 +4,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RAPHINHA EMPIRE | THE BRAZILIAN KING</title>
-
+<title>RAPHINHA EMPIRE 👑</title>
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  background: #080611;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-
-header {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px;
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{
+  font-family:Arial,sans-serif;
+  color:white;
   background:
-    radial-gradient(circle at 50% 40%, #50158b 0%, transparent 45%),
-    linear-gradient(135deg, #080611, #170829, #080611);
-  overflow: hidden;
-  position: relative;
+    radial-gradient(ellipse at 15% 15%,#8b21d9 0%,transparent 35%),
+    radial-gradient(ellipse at 85% 40%,#5511a8 0%,transparent 40%),
+    radial-gradient(ellipse at 50% 90%,#a52cff 0%,transparent 35%),
+    linear-gradient(135deg,#160326,#31075c,#10001e);
+  background-attachment:fixed;
 }
-
-header::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: #8b2cff;
-  filter: blur(180px);
-  opacity: 0.25;
-  top: 10%;
-  left: 10%;
+header{
+  min-height:95vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
+  background:
+    linear-gradient(120deg,#240044bb,#7000cabb,#160025bb),
+    radial-gradient(circle at center,#a020f0,#210039);
+  position:relative;
+  overflow:hidden;
 }
-
-.hero-image {
-  width: 280px;
-  max-width: 80%;
-  border-radius: 25px;
-  border: 3px solid #a855f7;
-  box-shadow: 0 0 35px #8b2cff;
-  margin-bottom: 25px;
-  position: relative;
+header:before{
+  content:"";
+  position:absolute;
+  width:600px;height:600px;
+  border-radius:50%;
+  background:#c000ff;
+  filter:blur(150px);
+  opacity:.4;
 }
-
-h1 {
-  font-size: clamp(38px, 8vw, 75px);
-  color: #d8a5ff;
-  text-shadow: 0 0 25px #9d4edd;
-  position: relative;
+.hero{
+  width:300px;
+  max-width:85%;
+  height:350px;
+  object-fit:cover;
+  border-radius:25px;
+  border:4px solid #e3a2ff;
+  box-shadow:0 0 25px #c000ff,0 0 80px #8b21d9;
+  position:relative;
+  margin-bottom:25px;
 }
-
-header p {
-  color: #ddd0ee;
-  margin-top: 12px;
-  font-size: 18px;
-  position: relative;
+h1{
+  font-size:clamp(40px,8vw,78px);
+  color:#f1d5ff;
+  text-shadow:0 0 15px #d000ff,0 0 40px #9b00ff;
+  position:relative;
 }
-
-nav {
-  background: #130b20;
-  padding: 18px 10px;
-  text-align: center;
-  border-top: 1px solid #8b2cff;
-  border-bottom: 1px solid #8b2cff;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+header p{position:relative;margin-top:15px;font-size:20px}
+nav{
+  background:#170025ee;
+  text-align:center;
+  padding:18px 8px;
+  position:sticky;top:0;z-index:5;
+  border-bottom:2px solid #d000ff;
+  box-shadow:0 5px 25px #a000ff55;
 }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 10px 14px;
-  display: inline-block;
-  font-weight: bold;
+nav a{
+  display:inline-block;color:white;text-decoration:none;
+  margin:8px 13px;font-weight:bold;
 }
-
-nav a:hover {
-  color: #c084fc;
+nav a:hover{color:#e4aaff}
+section{max-width:1150px;margin:auto;padding:65px 7%}
+h2{
+  text-align:center;font-size:34px;
+  color:#edc5ff;
+  text-shadow:0 0 20px #bc36ff;
+  margin-bottom:30px;
 }
-
-section {
-  padding: 65px 8%;
-  max-width: 1200px;
-  margin: auto;
+.panel{
+  background:linear-gradient(135deg,#7b16b9cc,#280044ee,#541080dd);
+  border:2px solid #d16aff;
+  border-radius:22px;padding:30px;
+  box-shadow:0 0 30px #9700d955;
+  text-align:center;line-height:2;
 }
-
-h2 {
-  color: #c084fc;
-  font-size: 32px;
-  margin-bottom: 25px;
-  text-align: center;
-  text-shadow: 0 0 15px #7e22ce;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
 }
-
-.intro {
-  background: #130d1e;
-  border: 1px solid #542080;
-  border-radius: 18px;
-  padding: 30px;
-  line-height: 1.9;
-  text-align: center;
-  font-size: 18px;
+.card{
+  background:linear-gradient(145deg,#a22be0,#43006f,#210039);
+  border:2px solid #e0a0ff;
+  border-radius:20px;
+  text-align:center;padding:28px 15px;
+  box-shadow:0 0 25px #9c20db77;
+  transition:.3s;
 }
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
+.card:hover{transform:translateY(-8px);box-shadow:0 0 35px #db70ff}
+.number{font-size:42px;font-weight:bold;color:#ffe0ff}
+.card p{margin-top:10px}
+.timeline{text-align:right;line-height:2.5}
+.timeline strong{color:#f0baff}
+.button{
+  display:inline-block;margin:12px 5px;
+  background:linear-gradient(90deg,#a000e8,#e04cff);
+  color:white;text-decoration:none;
+  padding:14px 25px;border-radius:30px;
+  font-weight:bold;box-shadow:0 0 20px #bb32ff;
 }
-
-.card {
-  background: linear-gradient(145deg, #211033, #100a19);
-  border: 1px solid #8135b9;
-  border-radius: 18px;
-  padding: 28px 15px;
-  text-align: center;
-  box-shadow: 0 0 18px #5b168533;
-  transition: 0.3s;
+.button:hover{filter:brightness(1.3)}
+.trophy{font-size:38px}
+footer{
+  text-align:center;padding:35px;
+  background:linear-gradient(90deg,#25003c,#7500a8,#25003c);
+  border-top:2px solid #dc8aff;
 }
-
-.card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 0 25px #9d4edd88;
-}
-
-.number {
-  font-size: 38px;
-  font-weight: bold;
-  color: #d8a5ff;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #e6d9f2;
-}
-
-.timeline {
-  border-right: 3px solid #a855f7;
-  padding-right: 25px;
-  line-height: 2.2;
-  font-size: 18px;
-}
-
-.timeline strong {
-  color: #d8a5ff;
-}
-
-.trophies {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 18px;
-}
-
-.trophy {
-  background: #180e26;
-  border: 1px solid #7e22ce;
-  border-radius: 15px;
-  padding: 25px;
-  text-align: center;
-  font-size: 18px;
-}
-
-.trophy span {
-  display: block;
-  font-size: 38px;
-  margin-bottom: 12px;
-}
-
-.highlight {
-  background: linear-gradient(120deg, #31104c, #160d23);
-  border: 1px solid #a855f7;
-  padding: 25px;
-  border-radius: 18px;
-  text-align: center;
-  line-height: 2;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 13px 25px;
-  background: #8b2cff;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.button:hover {
-  background: #b56aff;
-  box-shadow: 0 0 20px #a855f7;
-}
-
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #10091a;
-  color: #c9a5e8;
-  border-top: 1px solid #7026a8;
-}
-
-@media(max-width: 600px) {
-  nav a {
-    margin: 7px;
-    font-size: 14px;
-  }
-  section {
-    padding: 45px 6%;
-  }
+@media(max-width:600px){
+  nav a{margin:6px;font-size:14px}
+  section{padding:45px 5%}
 }
 </style>
 </head>
-
 <body>
 
 <header>
-  <img class="hero-image"
-  src="https://www.fcbarcelona.com/photo-resources/2025/09/10/08bbb1ff-004b-4623-a675-66fd1fbfdc8b/11-Raphinha.jpg?height=600&width=600"
-  alt="Raphinha FC Barcelona">
-
-  <h1>RAPHINHA EMPIRE 👑</h1>
-  <p>THE BRAZILIAN KING 🇧🇷</p>
-  <p>ONE PLAYER. ONE EMPIRE. ONE LEGEND.</p>
+<img class="hero"
+src="https://www.fcbarcelona.com/photo-resources/2025/09/10/08bbb1ff-004b-4623-a675-66fd1fbfdc8b/11-Raphinha.jpg?height=600&width=600"
+alt="Raphinha">
+<h1>RAPHINHA EMPIRE 👑</h1>
+<p>THE BRAZILIAN KING 🇧🇷</p>
+<p>ONE PLAYER. ONE EMPIRE. ONE LEGEND.</p>
 </header>
 
 <nav>
-  <a href="#about">על ראפיניה</a>
-  <a href="#stats">נתונים</a>
-  <a href="#career">קריירה</a>
-  <a href="#trophies">תארים</a>
-  <a href="#highlights">היילייטס</a>
+<a href="#about">על ראפיניה</a>
+<a href="#stats">נתונים</a>
+<a href="#career">קריירה</a>
+<a href="#trophies">תארים</a>
+<a href="#highlights">היילייטס</a>
 </nav>
 
 <section id="about">
-  <h2>👑 THE KING</h2>
-  <div class="intro">
-    <p>
-      ראפיניה הוא אחד הכוכבים הגדולים של ברצלונה.
-      הכוכב הברזילאי משחק בעמדת הכנף, עם מהירות,
-      דריבל, בעיטות מדויקות ואופי של מנהיג.
-    </p>
-    <p>
-      מספר חולצה: 11 🔥
-      <br>
-      נבחרת: ברזיל 🇧🇷
-      <br>
-      מועדון: FC Barcelona 🔵🔴
-    </p>
-  </div>
+<h2>👑 THE KING</h2>
+<div class="panel">
+ראפיניה – הכוכב הברזילאי של ברצלונה!
+מהירות, דריבל, שערים, בישולים ואופי של אלוף.
+<br>מספר 11 | ברזיל 🇧🇷 | ברצלונה 🔵🔴
+</div>
 </section>
 
 <section id="stats">
-  <h2>📊 SEASON 2026/27</h2>
-  <div class="stats">
-    <div class="card">
-      <div class="number">15</div>
-      <p>שערים בליגה</p>
-    </div>
-    <div class="card">
-      <div class="number">3</div>
-      <p>בישולים בליגה</p>
-    </div>
-    <div class="card">
-      <div class="number">11</div>
-      <p>הופעות בליגה</p>
-    </div>
-  </div>
-  <p style="text-align:center;color:#bda8d0;margin-top:18px">
-    נתוני הליגה לעונת 2026/27 לפי אתר LaLiga.
-  </p>
+<h2>⚽ THE NUMBERS</h2>
+<div class="grid">
+<div class="card"><div class="number">11</div><p>מספר חולצה</p></div>
+<div class="card"><div class="number">🇧🇷</div><p>נבחרת ברזיל</p></div>
+<div class="card"><div class="number">FCB</div><p>ברצלונה</p></div>
+</div>
 </section>
 
 <section id="career">
-  <h2>⚽ THE JOURNEY</h2>
-  <div class="intro timeline">
-    <p><strong>AVAÍ</strong> – תחילת הדרך בברזיל 🇧🇷</p>
-    <p><strong>VITÓRIA GUIMARÃES</strong> – פורטוגל 🇵🇹</p>
-    <p><strong>SPORTING CP</strong> – פורטוגל 🇵🇹</p>
-    <p><strong>RENNES</strong> – צרפת 🇫🇷</p>
-    <p><strong>LEEDS UNITED</strong> – אנגליה 🏴</p>
-    <p><strong>FC BARCELONA</strong> – הבית של המלך 🔵🔴</p>
-  </div>
+<h2>🌍 THE JOURNEY</h2>
+<div class="panel timeline">
+<p><strong>AVAÍ</strong> – ברזיל 🇧🇷</p>
+<p><strong>VITÓRIA GUIMARÃES</strong> – פורטוגל 🇵🇹</p>
+<p><strong>SPORTING CP</strong> – פורטוגל 🇵🇹</p>
+<p><strong>RENNES</strong> – צרפת 🇫🇷</p>
+<p><strong>LEEDS UNITED</strong> – אנגליה 🏴</p>
+<p><strong>FC BARCELONA</strong> – הבית של המלך 🔵🔴</p>
+</div>
 </section>
 
 <section id="trophies">
-  <h2>🏆 THE TROPHY ROOM</h2>
-  <div class="trophies">
-    <div class="trophy">
-      <span>🏆</span>
-      <strong>3</strong>
-      <p>אליפויות ספרד</p>
-    </div>
-    <div class="trophy">
-      <span>🥇</span>
-      <strong>3</strong>
-      <p>סופר קאפ ספרדי</p>
-    </div>
-    <div class="trophy">
-      <span>🏆</span>
-      <strong>1</strong>
-      <p>גביע המלך</p>
-    </div>
-  </div>
+<h2>🏆 TROPHY ROOM</h2>
+<div class="grid">
+<div class="card"><div class="trophy">🏆</div><p>תארים עם ברצלונה</p></div>
+<div class="card"><div class="trophy">🥇</div><p>הישגים אישיים</p></div>
+<div class="card"><div class="trophy">🇧🇷</div><p>נבחרת ברזיל</p></div>
+</div>
 </section>
 
 <section id="highlights">
-  <h2>🎬 RAPHINHA HIGHLIGHTS</h2>
-  <div class="highlight">
-    <h3>THE BEST MOMENTS OF THE KING</h3>
-    <p>צפו בשערים, בדריבלים וברגעים הגדולים של ראפיניה.</p>
-    <a class="button"
-    href="https://www.youtube.com/results?search_query=Raphinha+best+goals+skills"
-    target="_blank">
-      WATCH HIGHLIGHTS ▶
-    </a>
-  </div>
+<h2>🎬 BEST MOMENTS</h2>
+<div class="panel">
+<h3>WATCH THE KING IN ACTION</h3>
+<p>השערים, הדריבלים והרגעים הגדולים של ראפיניה.</p>
+<a class="button" href="https://www.youtube.com/results?search_query=Raphinha+best+goals+skills" target="_blank">WATCH HIGHLIGHTS ▶</a>
+</div>
 </section>
 
 <section>
-  <h2>🔗 OFFICIAL LINKS</h2>
-  <div class="highlight">
-    <a class="button"
-    href="https://www.fcbarcelona.com/en/players/24156"
-    target="_blank">הפרופיל הרשמי של ראפיניה</a>
-    <br>
-    <a class="button"
-    href="https://www.laliga.com/en-ES/player/raphinha"
-    target="_blank">נתוני LaLiga</a>
-  </div>
+<h2>🔗 OFFICIAL LINKS</h2>
+<div class="panel">
+<a class="button" href="https://www.fcbarcelona.com/en/players/24156" target="_blank">FC BARCELONA</a>
+<a class="button" href="https://www.laliga.com/en-ES/player/raphinha" target="_blank">LALIGA</a>
+</div>
 </section>
 
 <footer>
-  <h3>RAPHINHA EMPIRE 👑</h3>
-  <p>THE HOME OF THE BRAZILIAN KING 🇧🇷</p>
-  <p>MADE FOR THE FANS 💜</p>
+<h2>RAPHINHA EMPIRE 👑</h2>
+<p>THE HOME OF THE BRAZILIAN KING 🇧🇷</p>
+<p>BUILT FOR THE FANS 💜</p>
 </footer>
-
 </body>
 </html>
